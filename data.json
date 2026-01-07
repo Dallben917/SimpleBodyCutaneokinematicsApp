@@ -1,0 +1,1493 @@
+[
+  {
+    "id": "",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "",
+    "Potential Functional Implications": ""
+  },
+  {
+    "id": "face_anterior_head",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "facial arches, eyes, mouth, ears",
+    "Potential Functional Implications": "eating"
+  },
+  {
+    "id": "face_anterior_head",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "facial arches, eyes, mouth, ears",
+    "Potential Functional Implications": "chewing food"
+  },
+  {
+    "id": "face_anterior_head",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "facial arches, eyes, mouth, ears",
+    "Potential Functional Implications": "visual observations"
+  },
+  {
+    "id": "posterior_head",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "",
+    "Potential Functional Implications": ""
+  },
+  {
+    "id": "anterior_neck",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Cervical extension",
+    "Potential Functional Implications": "Driving"
+  },
+  {
+    "id": "anterior_neck",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Cervical extension",
+    "Potential Functional Implications": "Bathing"
+  },
+  {
+    "id": "anterior_neck",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Lateral cervical flexion",
+    "Potential Functional Implications": "Driving"
+  },
+  {
+    "id": "anterior_neck",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Lateral cervical flexion",
+    "Potential Functional Implications": "Bathing"
+  },
+  {
+    "id": "anterior_neck",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Cervical rotation",
+    "Potential Functional Implications": "Driving"
+  },
+  {
+    "id": "anterior_neck",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Cervical rotation",
+    "Potential Functional Implications": "Bathing"
+  },
+  {
+    "id": "posterior_neck",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Cervical flexion",
+    "Potential Functional Implications": "Reading book"
+  },
+  {
+    "id": "posterior_neck",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Cervical flexion",
+    "Potential Functional Implications": "Writing"
+  },
+  {
+    "id": "posterior_neck",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Cervical flexion",
+    "Potential Functional Implications": "Looking at phone"
+  },
+  {
+    "id": "posterior_neck",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Cervical flexion",
+    "Potential Functional Implications": "Driving"
+  },
+  {
+    "id": "posterior_neck",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Lateral cervical flexion",
+    "Potential Functional Implications": "Reading book"
+  },
+  {
+    "id": "posterior_neck",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Lateral cervical flexion",
+    "Potential Functional Implications": "Writing"
+  },
+  {
+    "id": "posterior_neck",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Lateral cervical flexion",
+    "Potential Functional Implications": "Looking at phone"
+  },
+  {
+    "id": "posterior_neck",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Lateral cervical flexion",
+    "Potential Functional Implications": "Driving"
+  },
+  {
+    "id": "posterior_neck",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Cervical rotation",
+    "Potential Functional Implications": "Reading book"
+  },
+  {
+    "id": "posterior_neck",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Cervical rotation",
+    "Potential Functional Implications": "Writing"
+  },
+  {
+    "id": "posterior_neck",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Cervical rotation",
+    "Potential Functional Implications": "Looking at phone"
+  },
+  {
+    "id": "posterior_neck",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Cervical rotation",
+    "Potential Functional Implications": "Driving"
+  },
+  {
+    "id": "anterior_left_upper_arm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left elbow extension",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "anterior_left_upper_arm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left elbow extension",
+    "Potential Functional Implications": "Bathing"
+  },
+  {
+    "id": "anterior_left_upper_arm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left elbow extension",
+    "Potential Functional Implications": "Sports"
+  },
+  {
+    "id": "posterior_left_upper_arm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left elbow flexion",
+    "Potential Functional Implications": "Washing back of neck"
+  },
+  {
+    "id": "posterior_left_upper_arm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left elbow flexion",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "posterior_left_upper_arm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left elbow flexion",
+    "Potential Functional Implications": "Apply jewelry"
+  },
+  {
+    "id": "anterior_left_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left supination",
+    "Potential Functional Implications": "Wash and brush hair"
+  },
+  {
+    "id": "anterior_left_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left supination",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "anterior_left_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left wrist extension",
+    "Potential Functional Implications": "Wash and brush hair"
+  },
+  {
+    "id": "anterior_left_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left wrist extension",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "anterior_left_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left wrist ulnar deviation",
+    "Potential Functional Implications": "Wash and brush hair"
+  },
+  {
+    "id": "anterior_left_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left wrist ulnar deviation",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "anterior_left_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left wrist radial deviation",
+    "Potential Functional Implications": "Wash and brush hair"
+  },
+  {
+    "id": "anterior_left_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left wrist radial deviation",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "posterior_left_forearm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left pronation",
+    "Potential Functional Implications": "Toilet hygiene"
+  },
+  {
+    "id": "posterior_left_forearm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left pronation",
+    "Potential Functional Implications": "Tying shoes"
+  },
+  {
+    "id": "posterior_left_forearm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left wrist flexion",
+    "Potential Functional Implications": "Toilet hygiene"
+  },
+  {
+    "id": "posterior_left_forearm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left wrist flexion",
+    "Potential Functional Implications": "Tying shoes"
+  },
+  {
+    "id": "posterior_left_forearm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left wrist radial deviation",
+    "Potential Functional Implications": "Toilet hygiene"
+  },
+  {
+    "id": "posterior_left_forearm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left wrist radial deviation",
+    "Potential Functional Implications": "Tying shoes"
+  },
+  {
+    "id": "posterior_left_forearm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left wrist ulnar deviation",
+    "Potential Functional Implications": "Toilet hygiene"
+  },
+  {
+    "id": "posterior_left_forearm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left wrist ulnar deviation",
+    "Potential Functional Implications": "Tying shoes"
+  },
+  {
+    "id": "left_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left MCP extension",
+    "Potential Functional Implications": "Wash face"
+  },
+  {
+    "id": "left_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left MCP extension",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "left_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left MCP extension",
+    "Potential Functional Implications": "Brush teeth"
+  },
+  {
+    "id": "left_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left thumb MCP abduction",
+    "Potential Functional Implications": "Wash face"
+  },
+  {
+    "id": "left_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left thumb MCP abduction",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "left_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left thumb MCP abduction",
+    "Potential Functional Implications": "Brush teeth"
+  },
+  {
+    "id": "left_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left palmar expansion",
+    "Potential Functional Implications": "Wash face"
+  },
+  {
+    "id": "left_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left palmar expansion",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "left_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left palmar expansion",
+    "Potential Functional Implications": "Brush teeth"
+  },
+  {
+    "id": "posterior_left_dorsal_hand",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left MCP flexion",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "posterior_left_dorsal_hand",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left MCP flexion",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "left_anterior_phalanges",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left PIP",
+    "Potential Functional Implications": "Cleaning"
+  },
+  {
+    "id": "left_anterior_phalanges",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left PIP",
+    "Potential Functional Implications": "Bathing"
+  },
+  {
+    "id": "left_anterior_phalanges",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left PIP",
+    "Potential Functional Implications": "Holding phone"
+  },
+  {
+    "id": "left_anterior_phalanges",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left DIP extension",
+    "Potential Functional Implications": "Cleaning"
+  },
+  {
+    "id": "left_anterior_phalanges",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left DIP extension",
+    "Potential Functional Implications": "Bathing"
+  },
+  {
+    "id": "left_anterior_phalanges",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left DIP extension",
+    "Potential Functional Implications": "Holding phone"
+  },
+  {
+    "id": "posterior_left_phalanges",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left PIP flexion",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "posterior_left_phalanges",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left PIP flexion",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "posterior_left_phalanges",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left DIP flexion",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "posterior_left_phalanges",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left DIP flexion",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "left_anterior_thumb",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left thumb IP extension",
+    "Potential Functional Implications": "Reaching for objects"
+  },
+  {
+    "id": "left_anterior_thumb",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left thumb IP extension",
+    "Potential Functional Implications": "Feeding"
+  },
+  {
+    "id": "left_anterior_thumb",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left thumb abduction",
+    "Potential Functional Implications": "Reaching for objects"
+  },
+  {
+    "id": "left_anterior_thumb",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left thumb abduction",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "left_anterior_thumb",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left thumb IP flexion",
+    "Potential Functional Implications": "Prehension"
+  },
+  {
+    "id": "left_anterior_thumb",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left thumb abduction",
+    "Potential Functional Implications": "Prehension"
+  },
+  {
+    "id": "anterior_right_upper_arm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right elbow extension",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "anterior_right_upper_arm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right elbow extension",
+    "Potential Functional Implications": "Bathing"
+  },
+  {
+    "id": "anterior_right_upper_arm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right elbow extension",
+    "Potential Functional Implications": "Sports"
+  },
+  {
+    "id": "anterior_right_upper_arm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right elbow extension",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "anterior_right_upper_arm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right elbow extension",
+    "Potential Functional Implications": "Bathing"
+  },
+  {
+    "id": "anterior_right_upper_arm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right elbow extension",
+    "Potential Functional Implications": "Sports"
+  },
+  {
+    "id": "anterior_right_upper_arm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right elbow extension",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "anterior_right_upper_arm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right elbow extension",
+    "Potential Functional Implications": "Bathing"
+  },
+  {
+    "id": "anterior_right_upper_arm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right elbow extension",
+    "Potential Functional Implications": "Sports"
+  },
+  {
+    "id": "posterior_right_upper_arm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right elbow flexion",
+    "Potential Functional Implications": "Washing back of neck"
+  },
+  {
+    "id": "posterior_right_upper_arm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right elbow flexion",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "posterior_right_upper_arm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right elbow flexion",
+    "Potential Functional Implications": "Apply jewelry"
+  },
+  {
+    "id": "posterior_right_upper_arm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right elbow flexion",
+    "Potential Functional Implications": "Washing back of neck"
+  },
+  {
+    "id": "posterior_right_upper_arm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right elbow flexion",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "posterior_right_upper_arm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right elbow flexion",
+    "Potential Functional Implications": "Apply jewelry"
+  },
+  {
+    "id": "posterior_right_upper_arm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right elbow flexion",
+    "Potential Functional Implications": "Washing back of neck"
+  },
+  {
+    "id": "posterior_right_upper_arm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right elbow flexion",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "posterior_right_upper_arm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right elbow flexion",
+    "Potential Functional Implications": "Apply jewelry"
+  },
+  {
+    "id": "anterior_right_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right supination",
+    "Potential Functional Implications": "Toilet hygiene"
+  },
+  {
+    "id": "anterior_right_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right supination",
+    "Potential Functional Implications": "Tying shoes"
+  },
+  {
+    "id": "anterior_right_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right supination",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "anterior_right_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right wrist extension",
+    "Potential Functional Implications": "Toilet hygiene"
+  },
+  {
+    "id": "anterior_right_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right wrist extension",
+    "Potential Functional Implications": "Tying shoes"
+  },
+  {
+    "id": "anterior_right_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right wrist extension",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "anterior_right_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right wrist ulnar deviation",
+    "Potential Functional Implications": "Toilet hygiene"
+  },
+  {
+    "id": "anterior_right_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right wrist ulnar deviation",
+    "Potential Functional Implications": "Tying shoes"
+  },
+  {
+    "id": "anterior_right_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right wrist ulnar deviation",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "anterior_right_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right wrist radial deviation",
+    "Potential Functional Implications": "Toilet hygiene"
+  },
+  {
+    "id": "anterior_right_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right wrist radial deviation",
+    "Potential Functional Implications": "Tying shoes"
+  },
+  {
+    "id": "anterior_right_forearm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right wrist radial deviation",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "posterior_right_forearm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right pronation",
+    "Potential Functional Implications": "Toilet hygiene"
+  },
+  {
+    "id": "posterior_right_forearm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right pronation",
+    "Potential Functional Implications": "Tying shoes"
+  },
+  {
+    "id": "posterior_right_forearm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right wrist flexion",
+    "Potential Functional Implications": "Toilet hygiene"
+  },
+  {
+    "id": "posterior_right_forearm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right wrist flexion",
+    "Potential Functional Implications": "Tying shoes"
+  },
+  {
+    "id": "posterior_right_forearm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right wrist radial deviation",
+    "Potential Functional Implications": "Toilet hygiene"
+  },
+  {
+    "id": "posterior_right_forearm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right wrist radial deviation",
+    "Potential Functional Implications": "Tying shoes"
+  },
+  {
+    "id": "posterior_right_forearm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right wrist ulnar deviation",
+    "Potential Functional Implications": "Toilet hygiene"
+  },
+  {
+    "id": "posterior_right_forearm",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right wrist ulnar deviation",
+    "Potential Functional Implications": "Tying shoes"
+  },
+  {
+    "id": "right_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right MCP extension",
+    "Potential Functional Implications": "Wash face"
+  },
+  {
+    "id": "right_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right MCP extension",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "right_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right MCP extension",
+    "Potential Functional Implications": "Brush teeth"
+  },
+  {
+    "id": "right_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right thumb MCP abduction",
+    "Potential Functional Implications": "Wash face"
+  },
+  {
+    "id": "right_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right thumb MCP abduction",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "right_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right thumb MCP abduction",
+    "Potential Functional Implications": "Brush teeth"
+  },
+  {
+    "id": "right_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right palmar expansion",
+    "Potential Functional Implications": "Wash face"
+  },
+  {
+    "id": "right_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right palmar expansion",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "right_anterior_palm",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right palmar expansion",
+    "Potential Functional Implications": "Brush teeth"
+  },
+  {
+    "id": "posterior_right_dorsal_hand",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right MCP flexion",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "posterior_right_dorsal_hand",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right MCP flexion",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "right_anterior_phalanges",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right PIP extension",
+    "Potential Functional Implications": "Cleaning"
+  },
+  {
+    "id": "right_anterior_phalanges",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right PIP extension",
+    "Potential Functional Implications": "Bathing"
+  },
+  {
+    "id": "right_anterior_phalanges",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right PIP extension",
+    "Potential Functional Implications": "Holding phone"
+  },
+  {
+    "id": "right_anterior_phalanges",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right DIP extension",
+    "Potential Functional Implications": "Cleaning"
+  },
+  {
+    "id": "right_anterior_phalanges",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right DIP extension",
+    "Potential Functional Implications": "Bathing"
+  },
+  {
+    "id": "right_anterior_phalanges",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right DIP extension",
+    "Potential Functional Implications": "Holding phone"
+  },
+  {
+    "id": "posterior_right_phalanges",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right PIP flexion",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "posterior_right_phalanges",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right PIP flexion",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "posterior_right_phalanges",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right DIP flexion",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "posterior_right_phalanges",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right DIP flexion",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "right_anterior_thumb",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right thumb IP extension",
+    "Potential Functional Implications": "Reaching for objects"
+  },
+  {
+    "id": "right_anterior_thumb",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right thumb IP extension",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "right_anterior_thumb",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right thumb abduction",
+    "Potential Functional Implications": "Reaching for objects"
+  },
+  {
+    "id": "right_anterior_thumb",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right thumb abduction",
+    "Potential Functional Implications": "Feed self"
+  },
+  {
+    "id": "posterior_right_thumb",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right thumb IP flexion",
+    "Potential Functional Implications": "Prehension"
+  },
+  {
+    "id": "posterior_right_thumb",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right thumb abduction",
+    "Potential Functional Implications": "Prehension"
+  },
+  {
+    "id": "anterior_trunk",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Trunk extension",
+    "Potential Functional Implications": "Looking at objects on ceiling"
+  },
+  {
+    "id": "anterior_trunk",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Trunk extension",
+    "Potential Functional Implications": "Reaching up to shelf"
+  },
+  {
+    "id": "anterior_trunk",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Lateral trunk flexion",
+    "Potential Functional Implications": "Looking at objects on ceiling"
+  },
+  {
+    "id": "anterior_trunk",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Lateral trunk flexion",
+    "Potential Functional Implications": "Reaching up to shelf"
+  },
+  {
+    "id": "anterior_trunk",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Trunk rotation",
+    "Potential Functional Implications": "Looking at objects on ceiling"
+  },
+  {
+    "id": "anterior_trunk",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Trunk rotation",
+    "Potential Functional Implications": "Reaching up to shelf"
+  },
+  {
+    "id": "anterior_trunk",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Bilat shoulder abduction",
+    "Potential Functional Implications": "Looking at objects on ceiling"
+  },
+  {
+    "id": "anterior_trunk",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Bilat shoulder abduction",
+    "Potential Functional Implications": "Reaching up to shelf"
+  },
+  {
+    "id": "posterior_trunk",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Trunk flexion",
+    "Potential Functional Implications": "Picking up objects off floor"
+  },
+  {
+    "id": "posterior_trunk",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Trunk flexion",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "posterior_trunk",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Lateral trunk flexion",
+    "Potential Functional Implications": "Picking up objects off floor"
+  },
+  {
+    "id": "posterior_trunk",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Lateral trunk flexion",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "posterior_trunk",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Trunk rotation",
+    "Potential Functional Implications": "Picking up objects off floor"
+  },
+  {
+    "id": "posterior_trunk",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Trunk rotation",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "posterior_trunk",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Bilat shoulder flexion",
+    "Potential Functional Implications": "Picking up objects off floor"
+  },
+  {
+    "id": "posterior_trunk",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Bilat shoulder flexion",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "anterior_left_thigh",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left knee flexion",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "anterior_left_thigh",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left knee flexion",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "posterior_left_thigh",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left knee extension",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "posterior_left_thigh",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left knee extension",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "left_medial_thigh",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left Hip abduction",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "left_medial_thigh",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left Hip abduction",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "left_medial_thigh",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left Hip ER",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "left_medial_thigh",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left Hip ER",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "left_periarea",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left Hip abduction",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "left_periarea",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left Hip abduction",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "left_periarea",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left Hip ER",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "left_periarea",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left Hip ER",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "left_lateral_thigh",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left Hip IR",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "left_lateral_thigh",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left Hip IR",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "anterior_left_leg",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left ankle PF",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "anterior_left_leg",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left ankle PF",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "posterior_left_calf",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left ankle DF",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "posterior_left_calf",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left ankle DF",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "anterior_left_foot",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Left MTP flexion",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "plantar_left_foot",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left MTP extension",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "left_medial_leg",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left ankle pronation",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "left_medial_leg",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left ankle eversion",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "left_medial_malleolus",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left ankle pronation",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "left_medial_malleolus",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left ankle eversion",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "left_lateral_leg",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left ankle supination",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "left_lateral_leg",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left ankle inversion",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "left_lateral_malleolus",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left ankle supination",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "left_lateral_malleolus",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Left ankle inversion",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "anterior_right_thigh",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right knee flexion",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "anterior_right_thigh",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right knee flexion",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "posterior_right_thigh",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right knee extension",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "posterior_right_thigh",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right knee extension",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "right_medial_thigh",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right Hip abduction",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "right_medial_thigh",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right Hip abduction",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "right_medial_thigh",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right Hip ER",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "right_medial_thigh",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right Hip ER",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "right_periarea",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right Hip abduction",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "right_periarea",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right Hip abduction",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "right_periarea",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right Hip ER",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "right_periarea",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right Hip ER",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "right_lateral_thigh",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right Hip IR",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "right_lateral_thigh",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right Hip IR",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "anterior_right_leg",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right ankle PF",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "anterior_right_leg",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right ankle PF",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "posterior_right_calf",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right ankle DF",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "posterior_right_calf",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right ankle DF",
+    "Potential Functional Implications": "Dressing"
+  },
+  {
+    "id": "anterior_right_foot",
+    "Anterior": "x",
+    "Posterior": "",
+    "Stretches to perform": "Right MTP flexion",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "plantar_right_foot",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right MTP extension",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "right_medial_leg",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right ankle pronation",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "right_medial_leg",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right ankle eversion",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "right_medial_malleolus",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right ankle pronation",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "right_medial_malleolus",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right ankle eversion",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "right_lateral_leg",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right ankle supination",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "right_lateral_leg",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right ankle inversion",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "right_lateral_malleolus",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right ankle supination",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "right_lateral_malleolus",
+    "Anterior": "",
+    "Posterior": "",
+    "Stretches to perform": "Right ankle inversion",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "left_buttock",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Left hip flexion",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "left_buttock",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Trunk flexion",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "right_buttock",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Right hip flexion",
+    "Potential Functional Implications": "Locomotion"
+  },
+  {
+    "id": "right_buttock",
+    "Anterior": "",
+    "Posterior": "x",
+    "Stretches to perform": "Trunk flexion",
+    "Potential Functional Implications": "Locomotion"
+  }
+]
