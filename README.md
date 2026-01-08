@@ -14,6 +14,7 @@ Special instructions for mobile use.
 This app can be used on all mobile devices such as smart phones and tablets.
 When used on a mobile device, the user can pinch-in or out with two fingers for zooming in and out.
 Scrolling up and down can be done with one finger.
+Author: James Lenk, PT
 
 Supporting Research for the application of Cutaneous Functional Unit theory as follows:
 
