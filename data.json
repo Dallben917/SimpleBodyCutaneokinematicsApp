@@ -1,6 +1,9 @@
 [
   {
     "id": "",
+    "Anterior": "",[
+  {
+    "id": "",
     "Anterior": "",
     "Posterior": "",
     "Stretches to perform": "",
@@ -10,21 +13,21 @@
     "id": "face_anterior_head",
     "Anterior": "x",
     "Posterior": "",
-    "Stretches to perform": "elevation/depression forehead and eyebrows, elevation/depression eyelids, lateral/medial stretch eyelids, mouth, cheeks, nasal flair, ears",
+    "Stretches to perform": "facial arches, eyes, mouth, ears",
     "Potential Functional Implications": "eating"
   },
   {
     "id": "face_anterior_head",
     "Anterior": "x",
     "Posterior": "",
-    "Stretches to perform": "elevation/depression forehead and eyebrows, elevation/depression eyelids, lateral/medial stretch eyelids, mouth, cheeks, nasal flair, ears",
+    "Stretches to perform": "facial arches, eyes, mouth, ears",
     "Potential Functional Implications": "chewing food"
   },
   {
     "id": "face_anterior_head",
     "Anterior": "x",
     "Posterior": "",
-    "Stretches to perform": "elevation/depression forehead and eyebrows, elevation/depression eyelids, lateral/medial stretch eyelids, mouth, cheeks, nasal flair, ears",
+    "Stretches to perform": "facial arches, eyes, mouth, ears",
     "Potential Functional Implications": "visual observations"
   },
   {
@@ -490,14 +493,14 @@
     "Potential Functional Implications": "Feed self"
   },
   {
-    "id": "left_anterior_thumb",
+    "id": "left_posterior_thumb",
     "Anterior": "",
     "Posterior": "x",
     "Stretches to perform": "Left thumb IP flexion",
     "Potential Functional Implications": "Prehension"
   },
   {
-    "id": "left_anterior_thumb",
+    "id": "left_posterior_thumb",
     "Anterior": "",
     "Posterior": "x",
     "Stretches to perform": "Left thumb abduction",
@@ -1169,14 +1172,14 @@
     "Potential Functional Implications": "Dressing"
   },
   {
-    "id": "anterior_left_leg",
+    "id": "left_anterior_leg",
     "Anterior": "x",
     "Posterior": "",
     "Stretches to perform": "Left ankle PF",
     "Potential Functional Implications": "Locomotion"
   },
   {
-    "id": "anterior_left_leg",
+    "id": "left_anterior_leg",
     "Anterior": "x",
     "Posterior": "",
     "Stretches to perform": "Left ankle PF",
@@ -1365,14 +1368,14 @@
     "Potential Functional Implications": "Dressing"
   },
   {
-    "id": "anterior_right_leg",
+    "id": "right_anterior_leg",
     "Anterior": "x",
     "Posterior": "",
     "Stretches to perform": "Right ankle PF",
     "Potential Functional Implications": "Locomotion"
   },
   {
-    "id": "anterior_right_leg",
+    "id": "right_anterior_leg",
     "Anterior": "x",
     "Posterior": "",
     "Stretches to perform": "Right ankle PF",
