@@ -1,77 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Body Cutaneokinematics App</title>
-  <style>
-    svg path {
-      fill: #ccc;
-      stroke: #333;
-      cursor: pointer;
-    }
-    svg path:hover {
-      fill: #ff9999;
-    }
-    #info {
-      margin-top: 20px;
-      font-family: sans-serif;
-    }
-	.selected {
+<meta charset="UTF-8">
+<title>Body Overlay with 9 Patterns + Clean Selection</title>
+<style>
+/* ============================
+   TOP FORM HEADER
+   ============================ */
+#form-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 16px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 200px;
+}
+
+.form-field label {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.line-input {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid #000;
+  padding: 2px 4px;
+  font-size: 14px;
+  outline: none;
+  background: transparent;
+  min-width: 120px;
+}
+
+.line-input:focus {
+  border-bottom: 2px solid #000;
+}
+
+
+/* ============================
+   MAIN FLEX LAYOUT
+   ============================ */
+#svg-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Left column holds SVG + utilities stacked */
+#left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 260px;
+}
+
+
+/* ============================
+   SVG + CANVAS SIZING
+   ============================ */
+#svg-container {
+  position: relative;
+  width: 420px;
+  border: none;
+  transform-origin: center center;
+  touch-action: none;
+  transition: transform 0.25s ease-out;
+}
+
+#bodySVG {
+  width: 100%;
+  height: auto;
+  display: block;
+  touch-action: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+#drawCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  z-index: 10;
+  touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+.shrink-svg-for-pdf {
+  width: 450px !important;
+}
+
+#svg-container.shrink-svg-for-pdf #drawCanvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+/* ============================
+   SVG PATH STYLING
+   ============================ */
+#bodySVG path {
+  fill: #ccc;
+  stroke: #333;
+  cursor: pointer;
+}
+
+#bodySVG path:hover {
+  fill: #ff9999;
+}
+
+.selected {
   fill: #ce2029 !important;
   stroke: #000;
   stroke-width: 2;
 }
-	@keyframes flash {
-      0%   { fill: yellow; stroke: black; stroke-width: 3; }
-      50%  { fill: orange; stroke: black; stroke-width: 2; }
-      100% { fill: #ce2029; stroke: #000; stroke-width: 2; }
-    }
-    .flash {
-      animation: flash 0.6s ease-out;
-    }
-    button {
-      margin-top: 10px;
-      padding: 8px 12px;
-      font-size: 14px;
-      cursor: pointer;
-    }
-	#svg-container {
-      position: relative;
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-  #handSVG {
-  width: 100%;
-  height: auto;
-  max-width: 800px;
-  display: block;
-  margin: 0 auto;
-  transition: transform 0.3s ease; /* Smooth animation */
+
+
+/* ============================
+   LEGEND COLUMN
+   ============================ */
+#legend {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 500px;
 }
 
-#handSVG:hover {
-  transform: scale(1.05); /* Zoom in by 5% */
+#legend h3 {
+  width: 100%;
+  margin: 0px 0 -10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 2px;
 }
-	#drawCanvas {
-		  position: absolute;
-		  top: 0;
-		  left: 0;
-		  width: 100%;
-		  height: 100%;
-		  pointer-events: none;
-    }
-  </style>
+
+.legend-item canvas {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+#legend button.active {
+  background: #1e90ff;
+  color: white;
+  border: 2px solid #000;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+.legend-item button {
+  font-size: 11px;
+  padding: 4px 4px 4px 12px;
+  text-align: left;
+}
+
+
+/* ============================
+   UTILITIES UNDER SVG
+   ============================ */
+#utilities {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: -12px;
+}
+
+.utilities-row {
+  display: flex;
+  gap: 6px;
+}
+
+.utilities-row button {
+  padding: 3px 6px;
+  font-size: 11px;
+}
+
+.mode-toggle-row {
+  display: flex;
+}
+
+.mode-toggle-row button {
+  padding: 4px 10px;
+  font-size: 12px;
+  background-color: #444;
+  color: #fff;
+  border: 2px solid #000;
+}
+
+
+/* ============================
+   WRAPPER
+   ============================ */
+#pdf-wrapper {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+
+/* ============================
+   FLOATING RESET BUTTON
+   ============================ */
+.floating-reset {
+  position: fixed;
+  z-index: 99999;
+  padding: 10px 14px;
+  font-size: 14px;
+  background: #444;
+  color: white;
+  border: 2px solid black;
+  border-radius: 6px;
+  transform-origin: bottom right;
+  will-change: transform;
+}
+
+.floating-reset.hide-for-pdf {
+  visibility: hidden !important;
+}
+
+
+/* ============================
+   PDF EXPORT FIXES
+   ============================ */
+.legend-force-column {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+.legend-tall-for-pdf {
+  height: auto !important;
+  min-height: 1200px !important;
+}
+
+.legend-no-margin-for-pdf {
+  margin: 0 !important;
+  padding: 6px !important;
+}
+
+.no-gap-for-pdf {
+  gap: 10px !important;
+}
+
+/* ⭐ Lock only the SVG layout width */
+.pdf-lock-width {
+  width: 800px;
+  max-width: 800px;
+}
+
+/* ⭐ Lock legend width */
+.legend-lock {
+  width: 300px;
+  max-width: 300px;
+}
+/* Center the SVG + Legend block */
+#svg-layout {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Smoothly enlarge the SVG + canvas during PDF export */
+.scale-up-for-pdf {
+  transform: scale(1.25);      /* adjust this number upward until it fills the page */
+  transform-origin: top left;  /* ensures predictable scaling */
+}
+
+
+
+/* ============================
+   INFO PANEL
+   ============================ */
+#info {
+  margin-top: 12px;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+
+/* ============================
+   TABLET LAYOUT
+   ============================ */
+@media (max-width: 900px) {
+  #svg-container {
+    width: 90%;
+    max-width: 500px;
+  }
+
+  #legend {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 90%;
+    max-width: 500px;
+  }
+}
+
+
+/* ============================
+   PHONE LAYOUT
+   ============================ */
+@media (max-width: 600px) {
+  .legend-item button {
+    font-size: 10px;
+    padding: 4px 4px 4px 6px;
+    min-height: 28px;
+  }
+
+  #legend h3 {
+    font-size: 13px;
+  }
+
+  #svg-container {
+    width: 100%;
+  }
+
+  .legend-item {
+    width: 48%;
+  }
+}
+
+.input-overlay {
+  position: absolute;
+  pointer-events: none;
+}
+
+.hide-for-pdf {
+  visibility: hidden !important;
+}
+</style>
+
+
+
 </head>
+<body>
+<button id="resetZoomBtn" class="floating-reset">Reset Zoom</button>
+<div id="pdf-wrapper">
+<div id="form-header">
+  <div class="form-field">
+    <label>Date:</label>
+    <input type="text" class="line-input">
+  </div>
+
+  <div class="form-field">
+    <label>Patient Name:</label>
+    <input type="text" class="line-input">
+  </div>
+
+  <div class="form-field">
+    <label>Room Number:</label>
+    <input type="text" class="line-input">
+  </div>
+
+  <div class="form-field">
+    <label>FIN:</label>
+    <input type="text" class="line-input">
+  </div>
+
+  <div class="form-field">
+    <label>Clinician:</label>
+    <input type="text" class="line-input">
+  </div>
+</div>
+
+
+<div style="display:flex; gap:10px; margin-bottom:10px;">
+<button id="modeToggle">Switch to Select Mode</button>
+<button id="savePdfBtn">Save as PDF</button>
+</div>
+
+<div id="svg-layout">
+  <div id="left-column">
+  <div id="svg-container">
 <svg
-   version="1.1"
-   id="svg1"
-   width="1000"
-   height="1204"
-   viewBox="0 0 1000 1204"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
+    id="bodySVG"
+    version="1.1"
+    width="1000"
+    height="1204"
+    viewBox="0 0 1000 1204"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs
      id="defs1">
     <rect
@@ -170,7 +504,7 @@
        id="image1"
        x="2"
        y="0"
-       style="fill:#66ff00" />
+       style="fill:#ffff00;fill-opacity:1" />
     <text
        xml:space="preserve"
        id="text61"
@@ -178,21 +512,21 @@
        transform="translate(30.914062,998)"><tspan
          x="9.5"
          y="31.617188"
-         id="tspan18"><tspan
+         id="tspan2"><tspan
            style="font-family:Calibri;-inkscape-font-specification:Calibri"
-           id="tspan4">Spreadsheet by: 
+           id="tspan1">Spreadsheet by: 
 </tspan></tspan><tspan
          x="9.5"
          y="46.734375"
-         id="tspan20"><tspan
+         id="tspan6"><tspan
            style="font-family:Calibri;-inkscape-font-specification:Calibri"
-           id="tspan19">Donna Bergkamp &amp;
+           id="tspan3">Donna Bergkamp &amp;
 </tspan></tspan><tspan
          x="9.5"
          y="61.851562"
-         id="tspan22"><tspan
+         id="tspan8"><tspan
            style="font-family:Calibri;-inkscape-font-specification:Calibri"
-           id="tspan21">James Lenk</tspan></tspan></text>
+           id="tspan7">James Lenk</tspan></tspan></text>
     <path
        id="anterior_trunk"
        style="fill:#808000"
@@ -224,25 +558,25 @@
     <path
        style="fill:#00ff00"
        d="m 61.5,619.5 32,15 5.5,15 0.5,13.5 -13.5,35 -53,-21 4,-11.5 c 0,0 29.5,-25 24.5,-46 z"
-       id="anterior_right_palm" />
+       id="right_anterior_palm" />
     <path
-       style="fill:#d4aa00"
+       style="fill:#FFD700"
        d="m 60,622 -21.5,8 -8.5,6 -23.5,6.5 -1.5,10 29,-1 3.5,12.5 c 0,0 32,-30 22.5,-42 z"
-       id="anterior_right_thumb" />
+       id="right_anterior_thumb" />
     <path
-       style="fill:#d4aa00"
+       style="fill:#FFD700"
        d="M 34.5,678.5 C 86,699 88,699 88,699 l -7,23 -3.5,0.5 -1,-8 1.5,-14.5 -5.5,-1.5 -8.5,18 4,3.5 -8.5,9.5 -1,-11.5 4,-24 -4,-1 -7.5,23.5 -0.5,12 -1,3.5 -5,3.5 -3,-9.5 0.5,-9.5 2,-14 4,-12.5 -2,-1 -7,21.5 v 6.5 l -0.5,9 -7,0.5 -2,-19.5 1,-11 0.5,-9 z"
-       id="anterior_right_phalanges" />
+       id="right_anterior_phalanges" />
     <path
        style="fill:#00ff00"
        d="m 433,617 -33.5,15 0.5,35 10.5,24 59.5,-15 -11,-24.5 c 0,0 -29.5,-13.5 -26,-34.5 z"
        id="left_anterior_palm" />
     <path
-       style="fill:#d4aa00"
+       style="fill:#FFD700"
        d="m 436,617.5 41.5,17 14,3 3,6 -4,1.5 H 478 l -13,-1.5 -5,6.5 c 0,0 -28,-10 -24,-32.5 z"
        id="left_anterior_thumb" />
     <path
-       style="fill:#d4aa00"
+       style="fill:#FFD700"
        d="m 467.5,677.5 -56,14.5 3,12.5 2.5,11.5 2,6.5 1.5,1 3.5,-5 0.5,-8.5 -1,-17 2,-0.5 4,8 3,16 5,10.5 h 3 l 3,-5.5 L 438,689 h 2.5 l 9,20 1,9 2,8.5 1.5,3 h 3 l -4,-44 h 2.5 l 5,16 3.5,14.5 v 1 l 4,0.5 0.5,-18 z"
        id="left_anterior_phalanges" />
     <path
@@ -270,10 +604,6 @@
        d="m 264,1138.5 36.5,2 4,14.5 16,16 9,9.5 -4,2 -0.5,10 -5,5 -4,2 -4,-6 -2,4.5 h -6.5 -2 l -6,-5.5 -2.5,-2 v 7 l -8.5,-1 -9.5,-6 -10.5,-11.5 -3,-24.5 z"
        id="anterior_left_foot" />
     <path
-       style="fill:#ff6600;stroke-width:1.02126"
-       d="m 699,139.04361 c 0,0 44.5,23.46692 79,2.08596 34.5,-21.38097 -1,1.04297 -1,1.04297 l 10,-1.56446 13,-27.11732 V 98.889127 l -5,-2.085947 -6.5,13.03717 -1,-2.60744 9.5,-43.804891 V 51.433821 L 789.5,32.660292 779,18.580146 763,7.6289213 751.5,5.0214869 742.5,4.5 731,5.5429738 l -13,4.6933822 -11.5,4.171895 -3.5,1.564461 -7.5,8.865277 -7.5,22.945423 -2.5,13.558659 2,17.730554 4,29.724755 -2.5,2.08594 -5,-13.037166 -1.5,0.521486 v 9.90826 l 3.5,11.4727 2,5.21487 0.5,6.77933 z"
-       id="posterior_head" />
-    <path
        id="posterior_neck"
        style="fill:#00ff00"
        d="m 691.00195,131.29297 c 0.17826,0.0941 0.35884,0.18907 0.54102,0.28515 -0.0376,-0.053 -0.0766,-0.10535 -0.11719,-0.15624 -0.13713,-0.0554 -0.27933,-0.0963 -0.42383,-0.12891 z m 9.48438,4.97461 c -0.10507,0.0482 -0.22142,0.0902 -0.34766,0.125 L 702.5,160 v 11.5 l -1.5,12 c 0,0 41,20 80,0 0.33354,-0.17104 0.66224,-0.33846 0.98438,-0.50391 -0.7914,-0.0723 -1.22603,-0.57806 -1.19922,-1.1289 C 780.59987,181.95375 780.5,182 780.5,182 l 0.5,-7 -1,-8.5 -1,-12.5 2,-15.5 -1.5,-2 c 0,0 -29.41187,24.99971 -79.01367,-0.23242 z" />
@@ -298,11 +628,11 @@
        d="m 938,600.5 -32,16 -16,-33.5 -8,-12 -10.5,-17.5 -10,-18 -4.5,-8.5 -8.5,-31 -0.5,-20.5 -6,-13 -1,-9 V 443 l 0.5,-2 52.5,-7.5 -0.5,15.5 7.5,11.5 10,24 3.5,13.5 4.5,17 1,10 v 12 l -0.5,7 v 6 z"
        id="posterior_right_forearm" />
     <path
-       style="fill:#d4aa00"
+       style="fill:#FFD700"
        d="m 530,638.5 c 2.5,-12.5 1.5,-12 1.5,-12 l -3.5,-0.5 -9.5,5 -7.5,12 -4,1 -10,11.5 1.5,4.5 7,-1 2.5,-5 2.5,-2.5 3.5,-1 5,-3.5 6,0.5 z"
-       id="posterior_left_thumb" />
+       id="left_posterior_thumb" />
     <path
-       style="fill:#d4aa00"
+       style="fill:#FFD700"
        d="m 523.5,681 52.5,7.5 -2,11 -2,8.5 -2,6 1.5,2 -5.5,4 -2,1.5 -0.5,-1 1,-6.5 -0.5,-7 v -15.5 h -2 l -6,18 -1.5,4 -1,1.5 v 5.5 l -3,2.5 -3.5,1 -0.5,-12.5 1,-9.5 2,-8 -2,-4 h -2 l -7.5,17.5 0.5,8 -1,5.5 v 1.5 l -1.5,2 -2.5,2 H 531 v -11 l -0.5,-6 1.5,-5.5 1,-5 2.5,-9.5 -0.5,-4.5 -5.5,0.5 -5.5,16.5 v 7.5 6.5 3 l -5,0.5 -0.5,-5.5 v -4.5 l -0.5,-4.5 0.5,-4 1,-5.5 V 690 Z"
        id="posterior_left_phalanges" />
     <path
@@ -310,11 +640,11 @@
        d="m 552.5,615.5 31,12 v 5.5 l 3,11.5 v 8 l -0.5,10 -2.5,4.5 -4,10 -4,7 -1,0.5 -3,1 h -2.5 -9 l -35,-8 3,-23 1,-4 2,-9 1,-4 1,-11.5 5.5,-1.5 5,-1 4,-2.5 z"
        id="posterior_left_dorsal_hand" />
     <path
-       style="fill:#d4aa00"
+       style="fill:#FFD700"
        d="m 962,623 c -10.5,-19 -9.5,-18 -9.5,-18 l 8,3 8.5,3 6.5,3 7,2.5 8,4 6.5,3 -3,5 -4,2.5 -15.5,-3 -3.5,-1 -3.5,-1 z"
        id="posterior_right_thumb" />
     <path
-       style="fill:#d4aa00"
+       style="fill:#FFD700;fill-opacity:1"
        d="m 973.5,659 -53,18.5 4,13.5 3,5 v 6.5 l 1.5,2.5 2,2.5 2.5,-1.5 1,-5 -1,-4.5 -1.5,-5 -0.5,-4.5 v -5.5 h 4.5 l 5.5,11.5 1,3.5 0.5,3 3.5,5.5 0.5,4 1,4 2.5,-2 2.5,-8 -2,-9 -6,-20 3.5,-1 c 0,0 6.5,11 6.5,13.5 0,2.5 1.5,8 1.5,8 l 4,8 2,6.5 1.5,4 v 1 h 2 l 3.5,-3.5 -0.5,-3.5 1.5,-3 -2,-7 -1,-7 -1.5,-6 -2,-4 -1,-6 v -3 l -2.5,-3.5 3.5,0.5 5,10.5 2,6 1.5,6.5 1.5,6 v 3 l 1.5,2.5 h 1.5 l 1.5,-5.5 -0.5,-9.5 1.5,-8.5 -1.5,-8 v -3.5 z"
        id="posterior_right_phalanges" />
     <path
@@ -342,7 +672,7 @@
        d="m 653,559.5 93.5,1 -0.5,53 -4,1 v 30 7 l -11.5,3.5 -7,2 -7,1 -4.5,-0.5 -6,-1 -6.5,-1 c 0,0 -2,-1 -6,-2 -4,-1 -13,-1.5 -13,-1.5 l -9.5,-2.5 -11,-3.5 -15.5,-6.5 -3.5,-2 -3.5,-19 1,-17 2,-11.5 3,-12.5 2,-7.5 1,-6.5 7.5,1 z"
        id="left_buttock" />
     <path
-       style="fill:#d4aa00"
+       style="fill:#FFD700"
        d="m 749.5,561 -1.5,50 2.5,4.5 -1.5,35.5 8.5,1.5 6,2 8.5,0.5 h 4.5 7.5 l 6,-2 4,-0.5 2.5,5 30.5,-9 9,-5 8,-3 5,-1.5 4,-1.5 2,-17.5 -1.5,-11 -2,-13 -1.5,-7 -3,-10 -2.5,-8.5 -1.5,-7.5 -0.5,-3 z"
        id="right_buttock" />
     <image
@@ -368,14 +698,14 @@
        style="font-size:26.6667px;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect29);display:inline;fill:#1a1a1a"><tspan
          x="427"
          y="1009.5938"
-         id="tspan23">R</tspan></text>
+         id="tspan9">R</tspan></text>
     <text
        xml:space="preserve"
        id="text30"
        style="font-size:26.6667px;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect30);display:inline;fill:#1a1a1a"><tspan
          x="553.5"
          y="1011.0938"
-         id="tspan24">L</tspan></text>
+         id="tspan10">L</tspan></text>
     <text
        xml:space="preserve"
        id="text31"
@@ -383,7 +713,7 @@
        transform="translate(6,23.5)"><tspan
          x="420.5"
          y="854.09378"
-         id="tspan25">Plantar Feet</tspan></text>
+         id="tspan11">Plantar Feet</tspan></text>
     <text
        xml:space="preserve"
        id="text33"
@@ -391,7 +721,7 @@
        transform="translate(12,6)"><tspan
          x="22"
          y="71.59378"
-         id="tspan26">Anterior</tspan></text>
+         id="tspan12">Anterior</tspan></text>
     <text
        xml:space="preserve"
        id="text34"
@@ -399,17 +729,17 @@
        transform="translate(14,6)"><tspan
          x="824"
          y="73.59378"
-         id="tspan27">Posterior</tspan></text>
+         id="tspan13">Posterior</tspan></text>
     <text
        xml:space="preserve"
        id="text1"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;font-family:Calibri;-inkscape-font-specification:Calibri;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1);display:inline;fill:#24221c"><tspan
          x="41"
          y="1102"
-         id="tspan28">Cutaneokinematics </tspan><tspan
+         id="tspan14">Cutaneokinematics </tspan><tspan
          x="41"
          y="1117"
-         id="tspan29">App by James Lenk</tspan></text>
+         id="tspan15">App by James Lenk</tspan></text>
     <text
        xml:space="preserve"
        id="text2"
@@ -436,11 +766,11 @@
        transform="translate(-20,-12)"><tspan
          x="341.60404"
          y="83.333361"
-         id="tspan30">Cutaneokinematics
+         id="tspan16">Cutaneokinematics
 </tspan><tspan
          x="475.17706"
          y="136.66674"
-         id="tspan31">App</tspan></text>
+         id="tspan17">App</tspan></text>
     <path
        style="fill:#ff00ff"
        d="m 241.83052,620.13265 1.41421,46.66905 h -28.99138 l -0.7071,-50.20459 z"
@@ -454,7 +784,7 @@
        d="m 215.66757,668.21591 25.45584,-0.70711"
        id="path4" />
     <path
-       style="fill:#d4aa00"
+       style="fill:#FFD700"
        d="m 239.00209,763.67532 2.12132,30.4056 -6.36396,-9.8995 -3.53553,2.12132 7.77817,33.23402 1.41422,23.33452 -4.94975,20.5061 -9.8995,26.16295 -5.65685,-2.12132 -4.94975,-219.2031 26.87006,0.70711 2.12132,36.76955 z"
        id="right_medial_thigh" />
     <path
@@ -482,11 +812,11 @@
        d="m 212.13203,893.07587 18.38478,1.41421 4.94975,29.69848 5.65685,26.16295 -2.82842,36.06245 -7.77818,48.79034 -4.94975,34.6483 2.82843,25.4558 1.41421,5.6569 h -9.19238 z"
        id="right_medial_leg" />
     <path
-       style="fill:#d4aa00"
+       style="fill:#FFD700"
        d="m 221.32442,1103.7937 7.77818,0.7071 c 0,0 4.24264,-12.0208 5.65685,9.8995 1.41422,21.9203 1.41422,21.9203 1.41422,21.9203 l -12.02082,-2.1213 z"
        id="right_medial_malleolus" />
     <path
-       style="fill:#d4aa00"
+       style="fill:#FFD700"
        d="m 278.60007,1106.6221 -9.19239,-2.8284 2.12132,-26.8701 -12.72792,-96.8736 3.53554,-43.84062 9.19238,-37.47666 h 18.38478 z"
        id="left_medial_leg" />
     <path
@@ -505,9 +835,12 @@
        style="fill:#ff00ff"
        d="m 199.40411,1107.3292 5.65686,-1.4142 4.94974,32.5269 -10.6066,3.5356 z"
        id="right_lateral_malleolus" />
+    <path
+       style="fill:#ff6600"
+       d="m 691.99998,104 -4.5,-28.500002 -0.5,-22.499999 4,-19 5,-11.5 10.5,-8.999999 21.5,-7.5000002 16.5,-1.4999999 11.5,0.5 13.5,4.4999998 15,14.4999993 9.5,15.5 4,13 -0.5,12.499999 -10,40.500002 4,1 4,-14.000002 4,1.5 -1,8.000002 v 7.5 l -7,14 -6,11 -5,-0.5 -1,1.5 v 0 c 0,0 -0.68102,-0.1903 0,0 12.37041,3.4568 -47.87098,25.54301 -79,-2.5 -22.7428,-20.48817 -2,-3 -2,-3 0,0 0,10 -5.5,1.5 l -5.5,-8.5 -4.5,-12 V 96.499997 c 0,0 -5,-8.499999 9,7.500003 z"
+       id="path1" />
   </g>
 </svg>
-
 <div id="info">
   <p>Click on a body section to see recommended Stretches and Potential Functional Implications.</p>
 </div>
