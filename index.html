@@ -1,404 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Body Overlay with 9 Patterns + Clean Selection</title>
-<style>
-/* ============================
-   TOP FORM HEADER
-   ============================ */
-#form-header {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 16px;
-  font-family: sans-serif;
-  font-size: 14px;
-}
-
-.form-field {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  min-width: 200px;
-}
-
-.form-field label {
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-.line-input {
-  flex: 1;
-  border: none;
-  border-bottom: 1px solid #000;
-  padding: 2px 4px;
-  font-size: 14px;
-  outline: none;
-  background: transparent;
-  min-width: 120px;
-}
-
-.line-input:focus {
-  border-bottom: 2px solid #000;
-}
-
-
-/* ============================
-   MAIN FLEX LAYOUT
-   ============================ */
-#svg-layout {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  width: 100%;
-  margin-bottom: 16px;
-}
-
-/* Left column holds SVG + utilities stacked */
-#left-column {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  min-width: 260px;
-}
-
-
-/* ============================
-   SVG + CANVAS SIZING
-   ============================ */
-#svg-container {
-  position: relative;
-  width: 420px;
-  border: none;
-  transform-origin: center center;
-  touch-action: none;
-  transition: transform 0.25s ease-out;
-}
-
-#bodySVG {
-  width: 100%;
-  height: auto;
-  display: block;
-  touch-action: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-}
-
-#drawCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: auto;
-  z-index: 10;
-  touch-action: none;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-}
-
-.shrink-svg-for-pdf {
-  width: 450px !important;
-}
-
-#svg-container.shrink-svg-for-pdf #drawCanvas {
-  width: 100% !important;
-  height: 100% !important;
-}
-
-
-/* ============================
-   SVG PATH STYLING
-   ============================ */
-#bodySVG path {
-  fill: #ccc;
-  stroke: #333;
-  cursor: pointer;
-}
-
-#bodySVG path:hover {
-  fill: #ff9999;
-}
-
-.selected {
+  <meta charset="UTF-8">
+  <title>Body Cutaneokinematics App</title>
+  <style>
+    svg path {
+      fill: #ccc;
+      stroke: #333;
+      cursor: pointer;
+    }
+    svg path:hover {
+      fill: #ff9999;
+    }
+    #info {
+      margin-top: 20px;
+      font-family: sans-serif;
+    }
+	.selected {
   fill: #ce2029 !important;
   stroke: #000;
   stroke-width: 2;
 }
-
-
-/* ============================
-   LEGEND COLUMN
-   ============================ */
-#legend {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 500px;
-}
-
-#legend h3 {
+	@keyframes flash {
+      0%   { fill: yellow; stroke: black; stroke-width: 3; }
+      50%  { fill: orange; stroke: black; stroke-width: 2; }
+      100% { fill: #ce2029; stroke: #000; stroke-width: 2; }
+    }
+    .flash {
+      animation: flash 0.6s ease-out;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+	#svg-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  #handSVG {
   width: 100%;
-  margin: 0px 0 -10px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #333;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 2px;
-}
-
-.legend-item canvas {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #000;
-  box-sizing: border-box;
-}
-
-#legend button.active {
-  background: #1e90ff;
-  color: white;
-  border: 2px solid #000;
-}
-
-.button-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 12px;
-}
-
-.legend-item {
-  display: flex;
-  align-items: center;
-  gap: 0px;
-}
-
-.legend-item button {
-  font-size: 11px;
-  padding: 4px 4px 4px 12px;
-  text-align: left;
-}
-
-
-/* ============================
-   UTILITIES UNDER SVG
-   ============================ */
-#utilities {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  margin-top: -12px;
-}
-
-.utilities-row {
-  display: flex;
-  gap: 6px;
-}
-
-.utilities-row button {
-  padding: 3px 6px;
-  font-size: 11px;
-}
-
-.mode-toggle-row {
-  display: flex;
-}
-
-.mode-toggle-row button {
-  padding: 4px 10px;
-  font-size: 12px;
-  background-color: #444;
-  color: #fff;
-  border: 2px solid #000;
-}
-
-
-/* ============================
-   WRAPPER
-   ============================ */
-#pdf-wrapper {
-  margin: 0 auto;
-  width: fit-content;
-}
-
-
-/* ============================
-   FLOATING RESET BUTTON
-   ============================ */
-.floating-reset {
-  position: fixed;
-  z-index: 99999;
-  padding: 10px 14px;
-  font-size: 14px;
-  background: #444;
-  color: white;
-  border: 2px solid black;
-  border-radius: 6px;
-  transform-origin: bottom right;
-  will-change: transform;
-}
-
-.floating-reset.hide-for-pdf {
-  visibility: hidden !important;
-}
-
-
-/* ============================
-   PDF EXPORT FIXES
-   ============================ */
-.legend-force-column {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-start !important;
-}
-
-.legend-tall-for-pdf {
-  height: auto !important;
-  min-height: 1200px !important;
-}
-
-.legend-no-margin-for-pdf {
-  margin: 0 !important;
-  padding: 6px !important;
-}
-
-.no-gap-for-pdf {
-  gap: 10px !important;
-}
-
-/* ⭐ Lock only the SVG layout width */
-.pdf-lock-width {
-  width: 800px;
+  height: auto;
   max-width: 800px;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.3s ease; /* Smooth animation */
 }
 
-/* ⭐ Lock legend width */
-.legend-lock {
-  width: 300px;
-  max-width: 300px;
+#handSVG:hover {
+  transform: scale(1.05); /* Zoom in by 5% */
 }
-/* Center the SVG + Legend block */
-#svg-layout {
-  margin-left: auto;
-  margin-right: auto;
-}
-/* Smoothly enlarge the SVG + canvas during PDF export */
-.scale-up-for-pdf {
-  transform: scale(1.25);      /* adjust this number upward until it fills the page */
-  transform-origin: top left;  /* ensures predictable scaling */
-}
-
-
-
-/* ============================
-   INFO PANEL
-   ============================ */
-#info {
-  margin-top: 12px;
-  font-family: sans-serif;
-  font-size: 13px;
-  line-height: 1.4;
-}
-
-
-/* ============================
-   TABLET LAYOUT
-   ============================ */
-@media (max-width: 900px) {
-  #svg-container {
-    width: 90%;
-    max-width: 500px;
-  }
-
-  #legend {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 12px;
-    width: 90%;
-    max-width: 500px;
-  }
-}
-
-
-/* ============================
-   PHONE LAYOUT
-   ============================ */
-@media (max-width: 600px) {
-  .legend-item button {
-    font-size: 10px;
-    padding: 4px 4px 4px 6px;
-    min-height: 28px;
-  }
-
-  #legend h3 {
-    font-size: 13px;
-  }
-
-  #svg-container {
-    width: 100%;
-  }
-
-  .legend-item {
-    width: 48%;
-  }
-}
-
-.input-overlay {
-  position: absolute;
-  pointer-events: none;
-}
-
-.hide-for-pdf {
-  visibility: hidden !important;
-}
-</style>
-
-
-
+	#drawCanvas {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  pointer-events: none;
+    }
+  </style>
 </head>
-<body>
-<button id="resetZoomBtn" class="floating-reset">Reset Zoom</button>
-<div id="pdf-wrapper">
-<div id="form-header">
-  <div class="form-field">
-    <label>Date:</label>
-    <input type="text" class="line-input">
-  </div>
-
-  <div class="form-field">
-    <label>Patient Name:</label>
-    <input type="text" class="line-input">
-  </div>
-
-  <div class="form-field">
-    <label>Room Number:</label>
-    <input type="text" class="line-input">
-  </div>
-
-  <div class="form-field">
-    <label>FIN:</label>
-    <input type="text" class="line-input">
-  </div>
-
-  <div class="form-field">
-    <label>Clinician:</label>
-    <input type="text" class="line-input">
-  </div>
-</div>
-
-
-<div style="display:flex; gap:10px; margin-bottom:10px;">
-<button id="modeToggle">Switch to Select Mode</button>
-<button id="savePdfBtn">Save as PDF</button>
-</div>
-
-<div id="svg-layout">
-  <div id="left-column">
-  <div id="svg-container">
-<svg
+   <svg
     id="bodySVG"
     version="1.1"
     width="1000"
